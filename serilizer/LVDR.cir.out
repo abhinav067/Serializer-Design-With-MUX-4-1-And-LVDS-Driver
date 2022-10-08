@@ -1,0 +1,31 @@
+* c:\fossee\esim\library\subcircuitlibrary\lvdr\lvdr.cir
+
+.lib "" 
+.include ""
+xsc3 net-_sc2-pad1_ net-_sc11-pad1_ /vdd /vdd sky130_fd_pr__pfet_01v8 
+xsc7 net-_sc4-pad2_ net-_sc10-pad1_ /vdd /vdd sky130_fd_pr__pfet_01v8 
+xsc10 net-_sc10-pad1_ net-_sc10-pad1_ /vdd /vdd sky130_fd_pr__pfet_01v8 
+xsc13 net-_sc11-pad1_ net-_sc11-pad1_ /vdd /vdd sky130_fd_pr__pfet_01v8 
+xsc2 net-_sc2-pad1_ /din /vob /vob sky130_fd_pr__nfet_01v8 
+xsc5 net-_sc2-pad1_ /din_bar /voa /voa sky130_fd_pr__nfet_01v8 
+xsc1 /vob /din_bar net-_sc1-pad3_ net-_sc1-pad3_ sky130_fd_pr__nfet_01v8 
+xsc6 /voa /din net-_sc1-pad3_ net-_sc1-pad3_ sky130_fd_pr__nfet_01v8 
+xsc4 net-_sc1-pad3_ net-_sc4-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc8 net-_sc10-pad1_ /voa net-_sc11-pad3_ net-_sc11-pad3_ sky130_fd_pr__nfet_01v8 
+xsc11 net-_sc11-pad1_ /vocm net-_sc11-pad3_ net-_sc11-pad3_ sky130_fd_pr__nfet_01v8 
+xsc14 net-_sc11-pad1_ /vocm net-_sc14-pad3_ net-_sc14-pad3_ sky130_fd_pr__nfet_01v8 
+xsc16 net-_sc10-pad1_ /vob net-_sc14-pad3_ net-_sc14-pad3_ sky130_fd_pr__nfet_01v8 
+xsc9 net-_sc4-pad2_ net-_sc4-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc12 net-_sc11-pad3_ /vbias gnd gnd sky130_fd_pr__nfet_01v8 
+xsc15 net-_sc14-pad3_ /vbias gnd gnd sky130_fd_pr__nfet_01v8 
+* s c m o d e
+* u1  /vdd /din /din_bar /vbias /voa /vob /vocm port
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end

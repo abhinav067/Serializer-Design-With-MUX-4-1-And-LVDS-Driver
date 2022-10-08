@@ -1,0 +1,35 @@
+* c:\users\91766\desktop\sky130\lvdr_test\lvdr_test.cir
+
+.include LVDR.sub
+.lib "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__r+c.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
+* u6  vocm ic
+.ic v(vocm)=0.9
+v1  din gnd pulse(0 1.8 0.1n 0.1n 0.1n 20n 40n)
+v2  din_bar gnd pulse(1.8 0 0.1n 0.1n 0.1n 20n 40n)
+vdd1 vdd gnd  dc 1.8
+vbias1 vbias gnd  dc 0.6
+* u4  vob plot_v1
+* u5  vocm plot_v1
+* u3  voa plot_v1
+* u1  din plot_v1
+* u2  din_bar plot_v1
+* s c m o d e
+* u6  vocm ic
+x1 vdd din din_bar vbias voa vob vocm LVDR
+.tran 0.1e-09 300e-09 0e-09
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(vocm)
+plot v(din) v(din_bar)+2 v(vob)+4 v(voa)+6 
+.endc
+.end

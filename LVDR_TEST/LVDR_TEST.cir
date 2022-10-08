@@ -1,0 +1,22 @@
+* C:\Users\91766\Desktop\sky130\LVDR_TEST\LVDR_TEST.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 10/08/22 17:01:09
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+v1  Din GND pulse		
+v2  Din_bar GND pulse		
+vdd1  vdd GND DC		
+vbias1  vbias GND DC		
+U4  vob plot_v1		
+U5  vocm plot_v1		
+U3  voa plot_v1		
+U1  Din plot_v1		
+U2  Din_bar plot_v1		
+scmode1  SKY130mode		
+U6  vocm IC		
+X1  vdd Din Din_bar vbias voa vob vocm LVDR		
+
+.end

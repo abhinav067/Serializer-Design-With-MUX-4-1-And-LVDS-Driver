@@ -1,0 +1,1 @@
+plot v(ybar) v(y)+2 v(s0)+4 v(s1)+6 v(data1)+8  v(data3)+10 v(en0)+12

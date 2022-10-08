@@ -1,0 +1,50 @@
+* c:\users\abhinav\dropbox\pc\desktop\sky130\lvdi\lvdi\lvdi.cir
+
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__r+c.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
+.lib "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
+* u5  vocm ic
+.ic v(vocm)=2.5
+xsc3 net-_sc2-pad1_ net-_sc11-pad1_ vdd vdd sky130_fd_pr__pfet_01v8 
+xsc7 net-_sc4-pad2_ net-_sc10-pad1_ vdd vdd sky130_fd_pr__pfet_01v8 
+xsc10 net-_sc10-pad1_ net-_sc10-pad1_ vdd vdd sky130_fd_pr__pfet_01v8 
+xsc13 net-_sc11-pad1_ net-_sc11-pad1_ vdd vdd sky130_fd_pr__pfet_01v8 
+xsc2 net-_sc2-pad1_ net-_sc2-pad2_ vob vob sky130_fd_pr__nfet_01v8 
+xsc5 net-_sc2-pad1_ ? voa voa sky130_fd_pr__nfet_01v8 
+xsc1 vob net-_sc1-pad2_ net-_sc1-pad3_ net-_sc1-pad3_ sky130_fd_pr__nfet_01v8 
+xsc6 voa ? net-_sc1-pad3_ net-_sc1-pad3_ sky130_fd_pr__nfet_01v8 
+xsc4 net-_sc1-pad3_ net-_sc4-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc8 net-_sc10-pad1_ voa net-_sc11-pad3_ net-_sc11-pad3_ sky130_fd_pr__nfet_01v8 
+xsc11 net-_sc11-pad1_ vocm net-_sc11-pad3_ net-_sc11-pad3_ sky130_fd_pr__nfet_01v8 
+xsc14 net-_sc11-pad1_ vocm net-_sc14-pad3_ net-_sc14-pad3_ sky130_fd_pr__nfet_01v8 
+xsc16 net-_sc10-pad1_ vob net-_sc14-pad3_ net-_sc14-pad3_ sky130_fd_pr__nfet_01v8 
+xsc9 net-_sc4-pad2_ net-_sc4-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc12 net-_sc11-pad3_ vbias gnd gnd sky130_fd_pr__nfet_01v8 
+xsc15 net-_sc14-pad3_ vbias gnd gnd sky130_fd_pr__nfet_01v8 
+v1 vdd gnd  dc 5
+* u1  net-_sc2-pad2_ plot_v1
+* u2  net-_sc1-pad2_ plot_db
+* u3  vob plot_db
+* u4  voa plot_db
+v2  net-_sc2-pad2_ gnd pulse(0 5 0.1n 0.1n 0.1n 20n 40n)
+v3  net-_sc1-pad2_ gnd pulse(0 5 0.1n 0.1n 0.1n 20n 40n)
+v4  vbias gnd pulse(0 5 0.1n 0.1n 0.1n 20n 40n)
+* u5  vocm ic
+* s c m o d e
+.tran 0.1e-09 300e-09 0e-09
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(net-_sc2-pad2_)
+plot db(net-_sc1-pad2_)
+plot db(vob)
+plot db(voa)
+.endc
+.end

@@ -1,0 +1,28 @@
+* C:\FOSSEE\eSim\library\SubcircuitLibrary\LVDR\LVDR.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 10/08/22 14:14:43
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+SC3  Net-_SC2-Pad1_ Net-_SC11-Pad1_ /vdd /vdd sky130_fd_pr__pfet_01v8		
+SC7  Net-_SC4-Pad2_ Net-_SC10-Pad1_ /vdd /vdd sky130_fd_pr__pfet_01v8		
+SC10  Net-_SC10-Pad1_ Net-_SC10-Pad1_ /vdd /vdd sky130_fd_pr__pfet_01v8		
+SC13  Net-_SC11-Pad1_ Net-_SC11-Pad1_ /vdd /vdd sky130_fd_pr__pfet_01v8		
+SC2  Net-_SC2-Pad1_ /Din /vob /vob sky130_fd_pr__nfet_01v8		
+SC5  Net-_SC2-Pad1_ /Din_bar /voa /voa sky130_fd_pr__nfet_01v8		
+SC1  /vob /Din_bar Net-_SC1-Pad3_ Net-_SC1-Pad3_ sky130_fd_pr__nfet_01v8		
+SC6  /voa /Din Net-_SC1-Pad3_ Net-_SC1-Pad3_ sky130_fd_pr__nfet_01v8		
+SC4  Net-_SC1-Pad3_ Net-_SC4-Pad2_ GND GND sky130_fd_pr__nfet_01v8		
+SC8  Net-_SC10-Pad1_ /voa Net-_SC11-Pad3_ Net-_SC11-Pad3_ sky130_fd_pr__nfet_01v8		
+SC11  Net-_SC11-Pad1_ /vocm Net-_SC11-Pad3_ Net-_SC11-Pad3_ sky130_fd_pr__nfet_01v8		
+SC14  Net-_SC11-Pad1_ /vocm Net-_SC14-Pad3_ Net-_SC14-Pad3_ sky130_fd_pr__nfet_01v8		
+SC16  Net-_SC10-Pad1_ /vob Net-_SC14-Pad3_ Net-_SC14-Pad3_ sky130_fd_pr__nfet_01v8		
+SC9  Net-_SC4-Pad2_ Net-_SC4-Pad2_ GND GND sky130_fd_pr__nfet_01v8		
+SC12  Net-_SC11-Pad3_ /Vbias GND GND sky130_fd_pr__nfet_01v8		
+SC15  Net-_SC14-Pad3_ /Vbias GND GND sky130_fd_pr__nfet_01v8		
+scmode1  SKY130mode		
+U1  /vdd /Din /Din_bar /Vbias /voa /vob /vocm PORT		
+
+.end
