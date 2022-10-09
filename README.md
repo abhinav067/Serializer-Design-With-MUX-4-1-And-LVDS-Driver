@@ -49,11 +49,14 @@ Mr. Abhinav Pandey , BE in Electronics and Telecommunication Engineering, Mumbai
 Student, Shree L. R. Tiwari College of Engineering, Mira Rd
 
 # Acknowledgements <br/>
-[1. Prof. Kannan Moudgalya, PI, Mixed Signal Circuit Design and Simulation Marathon usign eSim](https://esim.fossee.in/mixed-signal-design-marathon/)<br/>
-[2. Mr. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)<br/>
+[1. Prof. Kannan Moudgalya, PI, Mixed Signal SoC design Marathon using eSim & SKY130](http://iitb.ac.in/)<br/>
+[2. Mr. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.vlsisystemdesign.com/)<br/>
 [3. Mr. Steeve Hoover, Redwood EDA](https://makerchip.com/)<br/>
+[4. Google](https://www.google.co.in/)<br/>
+[3. Ministry of Electronics & Information Technology (MeitY) Chips to Startup (C2S)](https://www.c2s.gov.in/)<br/>
+[3. Spoken Tutorial](https://spoken-tutorial.org/)<br/>
 [4. Mr. Sumanto Kar,PS, FOSSEE IITB](https://fossee.in/)<br/>
-[5. Ms. A. Devipriya](https://github.com/Devipriya1921/vsdserializer_v1/)<br/>
+[5. Mrs. Madhuri Kadam](https://github.com/MadhuriKadam9/Design-of-Serializer-with-LVDS-Driver/)<br/>
 
 # References <br/>
 [1]  Hari Shanker Gupta, RM Parmar and R K Dave, “High Speed LVDS     Driver for SERDES ,” IEEE Conference Proc., July 2009.
